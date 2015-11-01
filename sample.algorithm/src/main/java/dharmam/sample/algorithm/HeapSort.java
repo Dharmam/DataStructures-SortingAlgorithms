@@ -2,15 +2,8 @@ package dharmam.sample.algorithm;
 
 public class HeapSort {
 
-	public static void main(String[] args) {
-		int arr[] = {0,12,5,11,3,10,17,9,18,8,1,7,2,16,15,6,4,20,19,14,2};
-		System.out.print("Initial Array is :");
-		show(arr);
-		heapsort(arr);
 
-	}
-
-	private static void heapsort(int[] arr) {
+	public static void heapsort(int[] arr) {
 		int[] arr1 = new int[arr.length];
 		for(int i = 0; i < arr.length ; i++)
 		{
@@ -41,7 +34,7 @@ public class HeapSort {
 
 	}
 
-	private static void show(int[] arr) {
+	public static void show(int[] arr) {
 		// TODO Auto-generated method stub
 		int i = 0;
 		System.out.println();
