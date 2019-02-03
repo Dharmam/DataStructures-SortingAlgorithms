@@ -1,10 +1,6 @@
 package december;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
-import sun.misc.ThreadGroupUtils;
 
 /**
  * 414. Third Maximum Number
