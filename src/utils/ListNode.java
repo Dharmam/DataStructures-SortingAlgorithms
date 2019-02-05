@@ -1,11 +1,11 @@
 package utils;
 
 public class ListNode {
-	int val;
-	ListNode next;
+	public int val;
+	public ListNode next;
 	public ListNode(int x){val =x;}
 	
-	static ListNode find(ListNode head, int x){
+	public static ListNode find(ListNode head, int x){
 		if(head == null)return null;
 		else{
 			ListNode temp = head;
@@ -17,12 +17,26 @@ public class ListNode {
 		}
 	}
 	
-	static void print(ListNode head){
+	public static void print(ListNode head){
 		ListNode temp = head;
 		while(temp!=null){
-			System.out.println("--> " + temp.val);
+			System.out.print(" --> " + temp.val);
 			temp = temp.next;
 		}
+		System.out.println();
 	}
+	
+	public static void addAtTail(ListNode head, int x){
+		if(head == null)head = new ListNode(x);
+		else{
+			ListNode temp = head;
+			while(temp.next != null){
+				temp = temp.next ;
+			}
+			temp.next = new ListNode(x);
+		}
+	}
+	
+	
 	
 }
