@@ -45,6 +45,8 @@ public class QueueUsingTwoStacks {
 		}
 		result[0] = i+1 ;
 		result[1] = j-1;
+		
+		
 		return result;
 
 	}
