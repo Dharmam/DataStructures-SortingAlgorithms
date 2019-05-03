@@ -1,6 +1,7 @@
 package may;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -33,10 +34,10 @@ public class TopKFrequentElements {
 
 			@Override
 			public int compare(Frequency o1, Frequency o2) {
-				if (o1.count > o2.val)
-					return 1;
-				else if (o1.count < o2.count)
+				if (o1.count > o2.count)
 					return -1;
+				else if (o1.count < o2.count)
+					return 1;
 				return 0;
 			}
 		});
@@ -71,32 +72,6 @@ public class TopKFrequentElements {
 		Frequency(int val, int count) {
 			this.val = val;
 			this.count = count;
-		}
-
-		@Override
-		public boolean equals(Object o) {
-
-			// null check
-			if (o == null) {
-				return false;
-			}
-
-			// this instance check
-			if (this == o) {
-				return true;
-			}
-
-			// instanceof Check and actual value check
-			if ((o instanceof Frequency) && (((Frequency) o).val == this.val)) {
-				return true;
-			} else {
-				return false;
-			}
-		}
-
-		@Override
-		public int hashCode() {
-			return val;
 		}
 	}
 
